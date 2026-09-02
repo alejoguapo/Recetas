@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Inventario - Ambiente de Sistemas CBA</title>
+
+    <style>
+      /* Configuración general */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 30px;
+        background-color: white;
+        color: #222;
+      }
+
+      /* Contenedor principal */
+      .contenedor {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      /* Título */
+      h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: #111;
+      }
+
+      /* Texto debajo del título */
+      .descripcion {
+        font-size: 17px;
+        margin-bottom: 25px;
+      }
+
+      /* Título de la tabla */
+      .titulo-tabla {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+
+      /* Tabla */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      /* Encabezados */
+      th {
+        background-color: #34495e;
+        color: white;
+        border: 1px solid #222;
+        padding: 8px;
+        font-size: 17px;
+      }
+
+      /* Celdas */
+      td {
+        border: 1px solid #555;
+        padding: 7px;
+        text-align: center;
+        font-size: 16px;
+      }
+
+      /* Ancho de las columnas */
+      th:nth-child(1),
+      td:nth-child(1) {
+        width: 25%;
+      }
+
+      th:nth-child(2),
+      td:nth-child(2) {
+        width: 40%;
+      }
+
+      th:nth-child(3),
+      td:nth-child(3) {
+        width: 20%;
+      }
+
+      th:nth-child(4),
+      td:nth-child(4) {
+        width: 15%;
+      }
+
+      /* Categorías */
+      .categoria {
+        background-color: #eeeeee;
+        font-weight: bold;
+        font-size: 17px;
+      }
+
+      /* Fila del total */
+      .total {
+        background-color: #bfc5c9;
+        font-weight: bold;
+        font-size: 17px;
+      }
+
+      /* Celda del total */
+      .total-texto {
+        text-align: right;
+      }
+
+      /* Adaptación para celulares */
+      @media (max-width: 700px) {
+        body {
+          padding: 15px;
+        }
+
+        h1 {
+          font-size: 22px;
+        }
+
+        .descripcion {
+          font-size: 15px;
+        }
+
+        th,
+        td {
+          font-size: 13px;
+          padding: 5px;
+        }
+
+        .categoria {
+          font-size: 13px;
+        }
+
+        .titulo-tabla {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="contenedor">
+      <!-- Título principal -->
+      <h1>Control de Inventario - Ambiente de Sistemas CBA</h1>
+
+      <!-- Descripción -->
+      <p class="descripcion">
+        Registro actualizado de los equipos disponibles para las sesiones
+        prácticas.
+      </p>
+
+      <!-- Título de la tabla -->
+      <div class="titulo-tabla">Inventario de Hardware 2026</div>
+
+      <!-- Tabla de inventario -->
+      <table>
+        <!-- Encabezados -->
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Equipo / Componente</th>
+            <th>Estado</th>
+            <th>Cantidad</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- PORTÁTILES -->
+          <tr>
+            <td class="categoria" rowspan="3">Portátiles</td>
+            <td>Dell Latitude E5430</td>
+            <td>Operativo</td>
+            <td>12</td>
+          </tr>
+
+          <tr>
+            <td>ASUS Vivobook 15</td>
+            <td>En<br />Mantenimiento</td>
+            <td>3</td>
+          </tr>
+
+          <tr>
+            <td>Lenovo ThinkPad T480</td>
+            <td>Operativo</td>
+            <td>5</td>
+          </tr>
+
+          <!-- COMPONENTES Y MÓVILES -->
+          <tr>
+            <td class="categoria" rowspan="4">Componentes y<br />Móviles</td>
+            <td>Pilas CMOS (Reemplazo)</td>
+            <td>Nuevo</td>
+            <td>20</td>
+          </tr>
+
+          <tr>
+            <td>Pantallas LCD Xiaomi</td>
+            <td>Nuevo</td>
+            <td>5</td>
+          </tr>
+
+          <tr>
+            <td>Teléfonos Google Pixel<br />(Pruebas)</td>
+            <td>Operativo</td>
+            <td>2</td>
+          </tr>
+
+          <tr>
+            <td>Memorias RAM 8GB DDR4</td>
+            <td>Nuevo</td>
+            <td>15</td>
+          </tr>
+
+          <!-- PERIFÉRICOS -->
+          <tr>
+            <td class="categoria" rowspan="4">Periféricos</td>
+            <td>Teclados USB en Español</td>
+            <td>Operativo</td>
+            <td>30</td>
+          </tr>
+
+          <tr>
+            <td>Ratones Ópticos</td>
+            <td>Operativo</td>
+            <td>30</td>
+          </tr>
+
+          <tr>
+            <td>Monitores 22 Pulgadas</td>
+            <td>Operativo</td>
+            <td>15</td>
+          </tr>
+
+          <tr>
+            <td>Diademas con Micrófono</td>
+            <td>En<br />Mantenimiento</td>
+            <td>10</td>
+          </tr>
+
+          <!-- EQUIPOS DE RED -->
+          <tr>
+            <td class="categoria" rowspan="4">Equipos de Red</td>
+            <td>Routers Inalámbricos Cisco</td>
+            <td>Operativo</td>
+            <td>5</td>
+          </tr>
+
+          <tr>
+            <td>Switches 24 Puertos</td>
+            <td>Operativo</td>
+            <td>3</td>
+          </tr>
+
+          <tr>
+            <td>Cajas de Cable UTP Cat 6</td>
+            <td>Nuevo</td>
+            <td>2</td>
+          </tr>
+
+          <tr>
+            <td>Ponchadoras RJ45</td>
+            <td>Operativo</td>
+            <td>8</td>
+          </tr>
+
+          <!-- TOTAL -->
+          <tr class="total">
+            <td colspan="3" class="total-texto">
+              Total de Artículos Registrados:
+            </td>
+            <td>165</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
